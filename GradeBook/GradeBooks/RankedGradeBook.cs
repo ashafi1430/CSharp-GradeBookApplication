@@ -46,10 +46,6 @@ namespace GradeBook.GradeBooks
             {
                 return 'D';
             }
-            else if (sortedGrades[(groupStudentsNumber * 5) - 1] >= averageGrade)
-            {
-                return 'E';
-            }
 
             return 'F';
         }
