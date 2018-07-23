@@ -27,22 +27,22 @@ namespace GradeBook.GradeBooks
             var groupStudentsNumber = (int)Math.Ceiling(Students.Count * 0.2);
 
             // Using Ling, sort the list into sorted list.
-            var sortedGrades = Students.OrderBy(students => students.AverageGrade).
+            var sortedGrades = Students.OrderByDescending(students => students.AverageGrade).
                 Select(students => students.AverageGrade).ToList();
 
-            if (sortedGrades[groupStudentsNumber - 1] >= averageGrade)
+            if (sortedGrades[groupStudentsNumber - 1] <= averageGrade)
             {
                 return 'A';
             }
-            else if (sortedGrades[(groupStudentsNumber * 2) - 1] >= averageGrade)
+            else if (sortedGrades[(groupStudentsNumber * 2) - 1] <= averageGrade)
             {
                 return 'B';
             }
-            else if (sortedGrades[(groupStudentsNumber * 3) - 1] >= averageGrade)
+            else if (sortedGrades[(groupStudentsNumber * 3) - 1] <= averageGrade)
             {
                 return 'C';
             }
-            else if (sortedGrades[(groupStudentsNumber * 4) - 1] >= averageGrade)
+            else if (sortedGrades[(groupStudentsNumber * 4) - 1] <= averageGrade)
             {
                 return 'D';
             }
