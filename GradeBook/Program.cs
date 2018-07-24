@@ -14,26 +14,26 @@ namespace GradeBook
             Console.WriteLine("#=======================#");
             Console.WriteLine();
 
-            var students = new List<Student>
-            {
-                new Student("jamie",StudentType.Standard,EnrollmentType.Campus)
-                {
-                    Grades = new List<double>{ 100, 102 }
-                },
-                new Student("john",StudentType.Standard,EnrollmentType.Campus)
-                {
-                    Grades = new List<double>{ 75 }
-                }
-            };
+            //var students = new List<Student>
+            //{
+            //    new Student("jamie",StudentType.Standard,EnrollmentType.Campus)
+            //    {
+            //        Grades = new List<double>{ 100, 102 }
+            //    },
+            //    new Student("john",StudentType.Standard,EnrollmentType.Campus)
+            //    {
+            //        Grades = new List<double>{ 75 }
+            //    }
+            //};
 
-            foreach (var student in students)
-            {
-                Console.WriteLine(student.Name);
-                foreach (var item in student.Grades)
-                {
-                    Console.WriteLine(item);
-                }
-            }
+            //foreach (var student in students)
+            //{
+            //    Console.WriteLine(student.Name);
+            //    foreach (var item in student.Grades)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
 
             StartingUserInterface.CommandLoop();
             
